@@ -28,14 +28,16 @@ const Index = () => {
               creates meaningful content within the given architectural form.
             </p>
             <p>
-              Think of it like 3D engineering—but instead of physical space, we navigate <strong>matrix spaces</strong> where 
-              dimensions represent features, weights, and transformations. This essential, intuitive understanding opens 
+              In 3D graphics, behind the scenes, matrices perform complex transformations of perspective, positioning, and shape. 
+              Similarly, when an <strong>optimizer runs through free-form matrices</strong>, it can learn advanced details—navigating 
+              high-dimensional spaces where information flows and transforms. This essential, intuitive understanding opens 
               the door to all advanced AI architectures.
             </p>
           </>
         }
         repoUrl="https://github.com/tambetvali/LaegnaAIBasics"
         repoName="LaegnaAIBasics"
+        theme="neural"
         concepts={[
           {
             term: "The Brain (Perceptron)",
@@ -51,7 +53,7 @@ const Index = () => {
           },
           {
             term: "Matrix Spaces",
-            description: "High-dimensional spaces where information flows and transforms, analogous to 3D engineering in abstract realms.",
+            description: "Like 3D transformations handle perspective and shape, optimizers traverse these spaces to learn intricate patterns.",
           },
         ]}
       />
@@ -82,7 +84,8 @@ const Index = () => {
           }
           repoUrl="https://github.com/tambetvali/LaegnaPracticalAI"
           repoName="LaegnaPracticalAI"
-          concepts={[
+        theme="document"
+        concepts={[
             {
               term: "RAG Architecture",
               description: "Retrieve relevant documents, then generate responses grounded in your actual content and context.",
@@ -131,6 +134,7 @@ const Index = () => {
         }
         repoUrl="https://github.com/tambetvali/LaegnaAITraining"
         repoName="LaegnaAITraining"
+        theme="meditation"
         concepts={[
           {
             term: "Fine-Tuning",
