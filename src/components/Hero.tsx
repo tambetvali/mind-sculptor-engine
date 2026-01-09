@@ -1,4 +1,4 @@
-import { Sparkles, ExternalLink } from "lucide-react";
+import { Sparkles } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -35,28 +35,8 @@ const Hero = () => {
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-8 animate-fade-up font-serif" style={{ animationDelay: "0.2s" }}>
-            We naturally know simple primitives to engineer from{" "}
-            <a 
-              href="https://www.youtube.com/watch?v=_VKlS-UJXGQ" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-primary font-semibold hover:text-primary/80 transition-colors inline-flex items-center gap-1"
-            >
-              four elements
-              <ExternalLink className="w-4 h-4" />
-            </a>
-            {" "}—{" "}<strong className="text-foreground">the material realm</strong>.
-            Here, we master the Perceptron: engineering with the{" "}
-            <a 
-              href="https://www.youtube.com/watch?v=fQ9RqgcR24g" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-primary font-semibold hover:text-primary/80 transition-colors inline-flex items-center gap-1"
-            >
-              fifth element
-              <ExternalLink className="w-4 h-4" />
-            </a>
-            , <strong className="text-foreground">the spirit of matter</strong>.
+            We naturally know simple primitives to engineer from four elements—the material realm. 
+            Here, we master the Perceptron: engineering with the fifth element, the spirit of matter.
           </p>
 
           {/* Philosophy */}
