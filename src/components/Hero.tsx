@@ -1,4 +1,4 @@
-import { Sparkles } from "lucide-react";
+import { Sparkles, ExternalLink } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -43,9 +43,9 @@ const Hero = () => {
               className="text-primary font-semibold hover:text-primary/80 transition-colors inline-flex items-center gap-1"
             >
               four elements
-              <span className="text-sm">→</span>
+              <ExternalLink className="w-4 h-4" />
             </a>
-            —<strong className="text-foreground">the material realm</strong>. 
+            {" "}—<strong className="text-foreground">the material realm</strong>.
             Here, we master the Perceptron: engineering with the{" "}
             <a 
               href="https://www.youtube.com/watch?v=fQ9RqgcR24g" 
@@ -54,7 +54,7 @@ const Hero = () => {
               className="text-primary font-semibold hover:text-primary/80 transition-colors inline-flex items-center gap-1"
             >
               fifth element
-              <span className="text-sm">→</span>
+              <ExternalLink className="w-4 h-4" />
             </a>
             , <strong className="text-foreground">the spirit of matter</strong>.
           </p>
