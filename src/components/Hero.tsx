@@ -8,8 +8,13 @@ const Hero = () => {
     >
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-gold-light/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "-3s" }} />
+        {/* Elemental orbs representing the five elements */}
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-amber-400/10 to-orange-500/5 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-gradient-to-br from-violet-400/10 to-primary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "-3s" }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-radial from-gold-light/5 to-transparent rounded-full blur-2xl" />
+        
+        {/* Fifth element - central spirit glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-br from-gold-light/30 to-primary/20 rounded-full blur-xl animate-pulse" />
       </div>
 
       <div className="container mx-auto px-6 pt-24 pb-16 relative z-10">
