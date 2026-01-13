@@ -51,9 +51,10 @@ interface AppendixBlockProps {
   linkUrl?: string;
   linkLabel?: string;
   variant: "experiments" | "current" | "deploy";
+  isCurrentSite?: boolean;
 }
 
-const AppendixBlock = ({ id, title, subtitle, description, concepts, linkUrl, linkLabel, variant }: AppendixBlockProps) => {
+const AppendixBlock = ({ id, title, subtitle, description, concepts, linkUrl, linkLabel, variant, isCurrentSite }: AppendixBlockProps) => {
   const variantStyles = {
     experiments: {
       bg: "bg-gradient-to-br from-rose-500/5 to-rose-600/10",
@@ -92,7 +93,14 @@ const AppendixBlock = ({ id, title, subtitle, description, concepts, linkUrl, li
             {description}
           </div>
 
-          {linkUrl && (
+          {isCurrentSite ? (
+            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-muted/50 text-muted-foreground font-medium text-sm cursor-default mb-8">
+              You are already here
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </span>
+          ) : linkUrl && (
             <a
               href={linkUrl}
               target="_blank"
@@ -185,6 +193,7 @@ const Appendix = () => {
         title="The Learning Path"
         subtitle="Mind Sculptor Engine"
         variant="current"
+        isCurrentSite
         description={
           <>
             <p>
@@ -198,8 +207,6 @@ const Appendix = () => {
             </p>
           </>
         }
-        linkUrl="/"
-        linkLabel="Return to Main Content"
         concepts={[
           {
             term: "AI Basics",
