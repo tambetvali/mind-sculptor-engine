@@ -57,39 +57,45 @@ const Navigation = () => {
             </span>
           </Link>
 
-          <div className="hidden md:flex items-center gap-8">
-            {/* Foundation link - always goes to main page */}
+          <div className="hidden md:flex items-center gap-6">
+            {/* Foundation link - always greenish, with selection indicator */}
             <Link
               to="/#foundation"
               onClick={(e) => handleNavigate(e, false)}
-              className={`text-sm font-medium transition-colors ${
+              className={`text-sm font-medium transition-all text-[hsl(var(--nav-foundation))] hover:text-[hsl(var(--nav-foundation))] relative ${
                 !isAppendix 
-                  ? "text-[hsl(var(--nav-foundation))] hover:text-[hsl(var(--nav-foundation))]" 
-                  : "text-muted-foreground hover:text-foreground"
+                  ? "after:absolute after:bottom-[-4px] after:left-0 after:right-0 after:h-[2px] after:bg-[hsl(var(--nav-foundation))] after:rounded-full" 
+                  : "opacity-70 hover:opacity-100"
               }`}
             >
               Foundation
             </Link>
+
+            {/* Separator */}
+            <span className="text-border">|</span>
 
             {/* Dynamic middle links based on current page */}
             {middleLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors px-2 py-1 rounded-md hover:bg-foreground/5"
               >
                 {link.label}
               </a>
             ))}
 
-            {/* Appendix link - always goes to appendix page */}
+            {/* Separator */}
+            <span className="text-border">|</span>
+
+            {/* Appendix link - always reddish, with selection indicator */}
             <Link
               to="/appendix#intro"
               onClick={(e) => handleNavigate(e, true)}
-              className={`text-sm font-medium transition-colors ${
+              className={`text-sm font-medium transition-all text-[hsl(var(--nav-appendix))] hover:text-[hsl(var(--nav-appendix))] relative ${
                 isAppendix 
-                  ? "text-[hsl(var(--nav-appendix))] hover:text-[hsl(var(--nav-appendix))]" 
-                  : "text-muted-foreground hover:text-foreground"
+                  ? "after:absolute after:bottom-[-4px] after:left-0 after:right-0 after:h-[2px] after:bg-[hsl(var(--nav-appendix))] after:rounded-full" 
+                  : "opacity-70 hover:opacity-100"
               }`}
             >
               Appendix
