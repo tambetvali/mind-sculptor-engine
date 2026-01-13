@@ -7,7 +7,7 @@ interface ConceptItem {
   icon?: React.ReactNode;
 }
 
-type ThemeVariant = "neural" | "document" | "meditation";
+type ThemeVariant = "neural" | "document" | "meditation" | "experiment";
 
 interface RepoSectionProps {
   id: string;
@@ -40,6 +40,12 @@ const themeStyles = {
     border: "border-l-amber-500",
     icon: "bg-amber-500/10 text-amber-600",
     glow: "hover:shadow-[0_0_20px_rgba(245,158,11,0.15)]",
+  },
+  experiment: {
+    accent: "from-rose-500/20 to-primary/20",
+    border: "border-l-rose-500",
+    icon: "bg-rose-500/10 text-rose-600",
+    glow: "hover:shadow-[0_0_20px_rgba(244,63,94,0.15)]",
   },
 };
 

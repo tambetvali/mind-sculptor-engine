@@ -155,6 +155,59 @@ const Index = () => {
         ]}
       />
 
+      {/* Appendix: Experiments & Resources */}
+      <div className="bg-parchment-dark/30">
+        <RepoSection
+          id="appendix"
+          number="+"
+          title="Experiments & Resources"
+          subtitle="Appendix"
+          description={
+            <>
+              <p>
+                <strong>LaegnaAIExperiments</strong> is the AI Lab where advanced experiments unfold—exploring 
+                AI-assisted AI programming and the fascinating capability of Artificial Intelligence to 
+                <strong> create other Artificial Intelligences</strong>. It's more than self-reflection; 
+                it's the love of creation.
+              </p>
+              <p>
+                The <strong>Document and Deploy AI</strong> portal serves as the original launchpad where 
+                different audiences—developers, researchers, individuals—can create or collect their knowledge, 
+                then connect it to AI interfaces, websites, or automation. A modular, user-role-driven approach 
+                where each role contributes to collective intelligence.
+              </p>
+              <p>
+                Together, these resources embody the philosophy of <strong>culture-aware AI</strong>: 
+                open-source community building support structures, consent-based AI-to-AI interfacing, 
+                and accelerating education, creativity, and development.
+              </p>
+            </>
+          }
+          repoUrl="https://github.com/tambetvali/LaegnaAIExperiments"
+          repoName="LaegnaAIExperiments"
+          theme="experiment"
+          concepts={[
+            {
+              term: "AI Creating AI",
+              description: "Exploring the recursive beauty of AI systems that design and generate other AI architectures.",
+            },
+            {
+              term: "Document & Deploy Portal",
+              description: "A launchpad at docu-deploy-ai.lovable.app for connecting knowledge to AI interfaces and automation.",
+            },
+            {
+              term: "Culture-Aware AI",
+              description: "Respecting diverse perspectives where each role—developer, researcher, user—contributes to collective intelligence.",
+            },
+            {
+              term: "AI-to-AI Interfacing",
+              description: "Consent-based connections between AI systems that accelerate education, creativity, and collaborative development.",
+            },
+          ]}
+          reversed
+        />
+      </div>
+
       <Footer />
     </div>
   );

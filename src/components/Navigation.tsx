@@ -12,10 +12,11 @@ const Navigation = () => {
   }, []);
 
   const navLinks = [
-    { href: "#foundation", label: "Foundation" },
-    { href: "#basics", label: "AI Basics" },
-    { href: "#practical", label: "Practical AI" },
-    { href: "#training", label: "Training" },
+    { href: "#foundation", label: "Foundation", colorClass: "text-[hsl(var(--nav-foundation))] hover:text-[hsl(var(--nav-foundation))]" },
+    { href: "#basics", label: "AI Basics", colorClass: "" },
+    { href: "#practical", label: "Practical AI", colorClass: "" },
+    { href: "#training", label: "Training", colorClass: "" },
+    { href: "#appendix", label: "Appendix", colorClass: "text-[hsl(var(--nav-appendix))] hover:text-[hsl(var(--nav-appendix))]" },
   ];
 
   return (
@@ -42,7 +43,9 @@ const Navigation = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className={`text-sm font-medium transition-colors ${
+                  link.colorClass || "text-muted-foreground hover:text-foreground"
+                }`}
               >
                 {link.label}
               </a>
